@@ -34,7 +34,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
     
      ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp.png)
     
-    * 2）填入名字，受支持账户类型前三任选，重定向填入 http://localhost:53682/ ，点击**注册**
+    * 2）填入名字，受支持账户类型前三任选（最好不要選僅個人賬戶，也就是第一個，并且要在Azure控制面板左側管理-驗證-打開允許公用用戶端流程），重定向填入 http://localhost:53682/ ，点击**注册**
     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp2.png)
     
