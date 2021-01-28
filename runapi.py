@@ -6,7 +6,7 @@ import json,sys,time,random
 app_num=os.getenv('APP_NUM')
 if app_num == '':
     app_num = '1'
-access_token_list=['wangziyingwen']*int(app_num)
+access_token_list=['abcdefg']*int(app_num)
 #配置选项，自由选择
 config_list = {'每次轮数':3,
             '是否启动随机时间':'Y','延时范围起始':600,'结束':1200,
