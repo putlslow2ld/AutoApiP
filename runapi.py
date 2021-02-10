@@ -43,7 +43,10 @@ api_list = [r'https://graph.microsoft.com/v1.0/me/',
             r"https://graph.microsoft.com/v1.0/me/messages?$filter=importance eq 'high'",
             r'https://graph.microsoft.com/v1.0/me/messages?$search="hello world"',
             r'https://graph.microsoft.com/beta/me/messages?$select=internetMessageHeaders&$top',
-            ]
+            r'https://graph.microsoft.com/Bookings.Read.All',
+            r'https://graph.microsoft.com/Channel.ReadBasic.All',
+            r'https://graph.microsoft.com/Team.ReadBasic.All',
+           ]
 
 #微软refresh_token获取
 def getmstoken(ms_token,appnum):
@@ -99,9 +102,9 @@ for a in range(1, int(app_num)+1):
 #随机api序列
 fixed_api=[0,1,5,6,20,21]
 #保证抽取到outlook,onedrive的api
-ex_api=[2,3,4,7,8,9,10,22,23,24,25,26,27,13,14,15,16,17,18,19,11,12]
+ex_api=[2,3,4,7,8,9,10,22,23,24,25,26,27,13,14,15,16,17,18,19,11,12,28,29]
 #额外抽取填充的api
-fixed_api.extend(random.sample(ex_api,6))
+fixed_api.extend(random.sample(ex_api,10))
 random.shuffle(fixed_api)
 final_list=fixed_api
 
@@ -121,7 +124,7 @@ for c in range(1,config_list['每次轮数']+1):
             client_secret=os.getenv('CLIENT_SECRET')
             print('\n'+'应用/账号 '+str(a)+' 的第'+str(c)+'轮 '+time.asctime(time.localtime(time.time()))+'\n')
             if config_list['是否开启随机api顺序'] == 'Y':
-                print("已开启随机顺序,共十二个api,自己数")
+                print("已开启随机顺序,共十六个api,自己数")
                 apilist=final_list
                 runapi(apilist,a)
             else:
